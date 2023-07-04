@@ -1,0 +1,59 @@
+//locations
+
+insert into locations (city,line1,line2,pincode,state,address_type)
+values
+  ("Pune","Ace Augusta ","Hinjewadi",420012,"Maharashtra","Office"),
+ ("Bangalore","Unity Building","JC Road",560002,"Karnataka","Warehouse"),
+("Pune","MegaStore","Karve Nagar",410038,"Maharashtra","Warehouse"),
+("Pune","Om Niwas","Khadki",411003,"Maharashtra","Customer"),
+("Bangalore","PVG House","Herohalli",560091,"Karnataka","Customer"),
+("Mumbai","Palais Royale","Worli",400018,"Maharashtra","Customer");
+
+
+// warehouse
+
+insert into warehouses(available_capacity,total_capacity,mgr_id,loc_id)
+values (3000,5000,1,2),(2000,8000,2,3);
+
+
+//godown manager
+
+insert into godown_managers(mgr_email,mgr_name,mgr_pass)
+values ("rohan_mgr@gmail.com","Rohan Pawar","rohan"),
+("john_mgr@gmail.com","John Reign","john");
+ 
+//users
+
+insert into users_tbl(email,password,user_name,user_role,loc_id)
+values ("John@gmail.com","john","John Cena","admin",1),                                     
+("ketan@gmail.com","ketan","Ketan Pawar","customer",4),("vijay@gmail.com","vijay","Vijay Kher","customer",5)
+,("aman@gmail.com","aman","Aman Shah","customer",6);
+
+//rating
+
+insert into ratings(rating,user_id)
+values (4,2),(3,3),(1,4);
+                 
+//request
+
+insert into request(actual_service_date,generation_date,request_type,reqd_space,service_date,customer_id,warehouse_id)
+ values("2020-05-10","2020-05-01 01:30:30","storage",500,"2020-05-05",2,1),
+("2021-01-15","2020-01-06 03:15:05","storage",200,"2021-01-13",3,2)
+("2022-01-20","2022-01-10 08:00:00","storage",800,"2022-01-15",4,2)
+("2022-06-25","2022-06-20 10:02:00","retrival",0,"2022-06-23",4,2);
+
+
+//CATEGORY
+ 
+insert into categories values("Furniture","All types of furnitures");
+insert into categories(category_name,description) values("Glassware","Fragile items"),("Machinery","Industrial equipment");
+
+//PRODUCT
+
+insert into products(product_name,volume,category_id) 
+values("Dining Table",30,3),("Sofa",50,3),("chair",15,3),("Window Pane",20,1),("Glass Door",10,1),("Lathe Machine",100,2),("CNC",70,2);
+
+
+
+
+
